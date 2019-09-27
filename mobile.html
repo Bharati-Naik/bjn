@@ -1,0 +1,30 @@
+<label>Enter mobile number:</label>
+<input type="text" id="mobile" oninput="check_mobile()">
+<label id ="message"></label>
+<div id="otp">
+	
+</div>
+	<script type="text/javascript">
+		var mobiles=["9449767225","9449556202","9113013609"];
+		function check_mobile(){
+		var user_mobile=document.getElementById("mobile").value;
+
+		var index=mobiles.indexOf(user_mobile);
+
+		if(index>=0)
+		{
+		document.getElementById("message").innerHTML="";
+		document.getElementById("otp").innerHTML="<label>Enter otp:</label><input type='text'id='mobile'>";
+		}
+		else
+		{
+		document.getElementById("otp").innerHTML="";
+		document.getElementById("message").innerHTML="mobile is not registered";	
+		}	
+		}
+		
+	</script>
+
+
+</body>
+</html>
